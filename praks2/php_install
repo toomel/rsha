@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+#php installeerimisskript
+echo "Installeerime PHP."
+apt-get install -y php7.0 
+php -v
+
