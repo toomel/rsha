@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+#phpmyadmin installeerimisskript
+echo "Installeerime PHPmyadmini."
+apt-get install -y phpmyadmin 
+
