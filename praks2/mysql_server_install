@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+#mysql installeerimisskript
+#
+#kontroll, kas apache pole juba paigaldatud
+mysql=$(dpkg-query -W -f='${Status}' mysql-server 2>/dev/null | grep -c "ok installed")
+#tulemus on kas 0 või suurem positiivne täisarv
+#kui on 0 siis teenus pole paigaldatud
+if [ $mysql -eq 0 ]; then
+	echo "Installeerime MySql-serveri."
+	apt-get install -y mysql-server;
+#kui ridade arv on nullist erinev
+elif [ $mysql -eq 1 ]; then
+	echo "Mysql-server on installeeritud."
+fi
+service mysql-server status
