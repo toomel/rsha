@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+#wordpressi installeerimisskript
+echo "Installeerime wordpressi."
+apt-get install -y wordpress 
+
